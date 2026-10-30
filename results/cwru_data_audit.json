@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "split_counts": {
+    "train": 1164,
+    "val": 291,
+    "test": 292
+  },
+  "source_record_disjoint": true,
+  "exact_query_content_disjoint": true
+}

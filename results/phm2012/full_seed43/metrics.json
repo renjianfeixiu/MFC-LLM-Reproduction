@@ -1,0 +1,32 @@
+{
+  "accuracy": 0.9381761978361669,
+  "f1_macro": 0.9140085061137693,
+  "f1_weighted": 0.9409945875414027,
+  "precision_macro": 0.8837209302325582,
+  "recall_macro": 0.9611650485436893,
+  "confusion_matrix": [
+    [
+      132,
+      0
+    ],
+    [
+      40,
+      475
+    ]
+  ],
+  "num_samples": 647,
+  "num_rul_samples": 515,
+  "rul_mae": 0.5553454756736755,
+  "rul_rmse": 0.5798831582069397,
+  "rul_r2": -18.15801239013672,
+  "classification_loss": 0.45625704526901245,
+  "regression_loss": 0.3362644910812378,
+  "loss": 0.7925215363502502,
+  "best_epoch": 41,
+  "seed": 43,
+  "variant": "full",
+  "parameters": 1402507,
+  "training_seconds": 94.10726737498771,
+  "prediction_clipping": false,
+  "checkpoint_sha256": "faadc08977b0c7511d4f54b07f7b8571caaf140c9c8ed0c350e54343271e99b4"
+}

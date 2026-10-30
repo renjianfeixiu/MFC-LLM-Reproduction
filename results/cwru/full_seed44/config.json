@@ -1,0 +1,198 @@
+{
+  "model": {
+    "in_channels": 2,
+    "num_classes": 10,
+    "channels": [
+      16,
+      32,
+      64
+    ],
+    "kernels": [
+      15,
+      7,
+      3
+    ],
+    "strides": [
+      8,
+      4,
+      2
+    ],
+    "attention_tokens": 64,
+    "pool_bins": 4,
+    "feature_dim": 1024,
+    "hidden_dim": 128,
+    "dropout": 0.1,
+    "value_source": "residual",
+    "variant": "full"
+  },
+  "training": {
+    "epochs": 50,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.01,
+    "lr_patience": 5,
+    "early_stopping_patience": 15,
+    "gradient_clip": 5.0,
+    "classification_weight": 1.0,
+    "rul_weight": 1.0,
+    "balanced_classes": false
+  },
+  "seed": 44,
+  "device": "cpu",
+  "threads": 4,
+  "data_metadata": {
+    "dataset": "CWRU",
+    "task": "classification",
+    "class_names": [
+      "normal",
+      "ball_007",
+      "ball_014",
+      "ball_021",
+      "inner_007",
+      "inner_014",
+      "inner_021",
+      "outer_007",
+      "outer_014",
+      "outer_021"
+    ],
+    "window_length": 4096,
+    "channels": [
+      "DE",
+      "FE"
+    ],
+    "protocol": "load_0_1_train__load_2_val__load_3_test",
+    "reference": {
+      "source_file": "97.mat",
+      "split": "train",
+      "start": 0,
+      "end": 4096
+    },
+    "normalization": "per-window per-channel population z-score in model; residual computed before z-score",
+    "source_sha256": {
+      "118.mat": "b00628f8dd8d1d930af77fa465d1e5cdb385fe259489053f91f3680bda7f640e",
+      "119.mat": "bc72d9df7668219e004a0f711232b23ec0aed393eb9bd8f9f5483426f6b51330",
+      "120.mat": "e0b7a584c49af52335ff0904a97d4afcf02d045625c582de63a7c85ce10b489c",
+      "121.mat": "52f686e984ba8e9b04a047a57416271cdb322cee57ee105dce58926a24b966cb",
+      "185.mat": "5bea2c60f177215ba3ec4ae287faf745d7e14aed1a12efe9e37b27c27044bafc",
+      "186.mat": "1b3b6f3ad38e891feaa8026fe957b34f62f9082785089cc74f6878acdfe88ec5",
+      "187.mat": "0f1338cce89beb5c8d8e5e154579bc576354e7c7d1617ebd1759662c6f3100b2",
+      "188.mat": "1981614324d653c2522bea68fd4fd87e337495b117d12596db67abd1e10e7443",
+      "222.mat": "fcc0ee740fa123b1f4683f555458891719efb2857afd9fdee63e8fde0ed14469",
+      "223.mat": "7287410fd2217e3b332c5ab4732a68963be046d7d17bd40efa41cabe6a0514e5",
+      "224.mat": "8a16894c2ff4d6bcdb9f4c345c0d5f13737b3bd6d15015d6b566c86e7a3ee7b7",
+      "225.mat": "ece92fa141af03473fdfca80d00d9112472a20340224514e79979c6ddc97a6cf",
+      "105.mat": "f80b0ea04fd06b372a0eaec7c056543ea37e4bb4727a5b173d2a5bacd2aa9cab",
+      "106.mat": "e5cec7cdd138e6cd1deb9ed8634e5aaa9bc1bd7094ddc075bff606580eb6e883",
+      "107.mat": "111ba8996a115684661a13c913bd74d8029a59294492f88aec7b03e175fdd388",
+      "108.mat": "d415f0e65128bfa0b118c2051c988fb0dc6ce3e4c8aa45fdc5ad1d0967462e7d",
+      "169.mat": "f5448673725c4ea2735fe7d3fe4b16ad82b217eac6b62c4bf351c4549b0a5229",
+      "170.mat": "bcb73a5208b67265468232a2e342f53719850901671d0ee28494f3af97621f46",
+      "171.mat": "63d0fdc1a68e64610ddfaf56a9c224d6137ab7b5c0d318eea1d542b9e5ffc029",
+      "172.mat": "f75170ceef70d5da475671de0d2e52a0acd9b3883ad422b6deaf2907d888ba24",
+      "209.mat": "9f723d6d9d2eba714c6dc50f99321dffa73d8b1e4d3605675b2c2251511eff80",
+      "210.mat": "596692397e77e129a00f7b7a61c4c3ffd6c7a59979b89039e7f70a7431cce1c7",
+      "211.mat": "8296a02ee489c2d16cbd9fc278ca2e29b22475cec70ebe840558c78b6b743dc1",
+      "212.mat": "bfe13761f545a26b217db897a12d27e16fec74306aa86ade8dbdc8ebe587c253",
+      "97.mat": "16bf48babcf1c7ac224bc1a81cd9eafdb27e42d5cf559761907e067e8eeadf3c",
+      "98.mat": "37e6612c05e65c415dcfa2ab27a3fda648a5863160fa898b884a14743044e045",
+      "99.mat": "4b97e6b5361f45efb6951dc3b1aebcdb3b89cb69d0f96d6f5c297dd9f45eee75",
+      "100.mat": "88a5990cb541320e91505a1d72139e1993500ffe6e292a451011667f4138ca78",
+      "130.mat": "35a095307d0971477049b343a1b5981dde465a58fb7f233ad89b035068c1717d",
+      "131.mat": "7883f7b83beadc54b2f301767f9145ce07055707182fb0278fdf0a6bb53ce3cb",
+      "132.mat": "17a69ed5d2270b42532e678e35bbe2fa04a2cc413cf2bf9e88c7692de8662d18",
+      "133.mat": "53f076cb0d905cf46bffaee7736abce8224ffed777deed03c0c863d762a90c71",
+      "197.mat": "fa571b47cd942f9514a920b403fb7c053cd442bb2963a360a96d0f61432f03e9",
+      "198.mat": "dbd58e4585ca8f8332c708b15936987ec0990ca701359fd2483dae2719df5b49",
+      "199.mat": "ca4e6407fdb68845a6973da6028477911a62d018580063749fe956441be95cf2",
+      "200.mat": "2526483d2701220a700df8e6c9db0c527641b0887225907f4096610dd7120f4b",
+      "234.mat": "ebcbdb96612e8085bbdbf81f0e5e8e8a8d1a693d1ec559c4894f7792771aa9b2",
+      "235.mat": "667e4bf1f213f92d10dca71d494ad002d8fd22bfd8004b31a4c71ccf0d764b66",
+      "236.mat": "c411d6d9826cba8073430555dc833e05fcbe4c38535f3eb7f03c525ea6797589",
+      "237.mat": "233d1edb2daa963658369119e389e30f02aca551dd7bb028ab33e7ba63edfd20"
+    },
+    "limitations": [
+      "跨负载测试不等于跨物理轴承测试",
+      "非论文的随机70/15/15划分",
+      "不从CWRU推造RUL标签",
+      "原样使用公开DE/FE序列；正常与故障记录的采样率元数据需另核"
+    ],
+    "split_counts": {
+      "train": 1164,
+      "val": 291,
+      "test": 292
+    },
+    "class_counts": {
+      "train": {
+        "1": 116,
+        "2": 116,
+        "3": 116,
+        "4": 116,
+        "5": 116,
+        "6": 116,
+        "0": 120,
+        "7": 116,
+        "8": 116,
+        "9": 116
+      },
+      "val": {
+        "1": 29,
+        "2": 29,
+        "3": 29,
+        "4": 29,
+        "5": 29,
+        "6": 29,
+        "0": 30,
+        "7": 29,
+        "8": 29,
+        "9": 29
+      },
+      "test": {
+        "1": 29,
+        "2": 29,
+        "3": 29,
+        "4": 30,
+        "5": 29,
+        "6": 29,
+        "0": 30,
+        "7": 29,
+        "8": 29,
+        "9": 29
+      }
+    },
+    "rul_label_counts": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    }
+  },
+  "config_source": "configs/signal.json",
+  "data_hashes": {
+    "windows.csv": "3a62b12947f5f1b520ba355f504d4fd27b52dc3c830006c7ccf64244dd3e9187",
+    "references.npy": "bb65097a5d46184bcb4909474aafeb5a811e1e13b5454592393921f3d36df6a0",
+    "train.npz": "97000d0b7c80dfc9761e4c5cb9057aea963dcb17fd5688a5d19639e359ad88ed",
+    "metadata.json": "08bf5736f1cb08d5dd0b2a85271bc28902f515207264bd7dfd79edb7443720d8",
+    "test.npz": "959516bad78e84fa346e9ed578758cb5fd7ffe0436b7b8519dea841b6eab4dae",
+    "val.npz": "3b6df29aef5dc790d6cf36d6d681b634ecddda0d513cd0c3a99c18458a7a4e48"
+  },
+  "class_weights": null,
+  "code_sha256": {
+    "mfc/metrics.py": "00774c1d230aa380a32b620a7bec4600ec848fe820dcd395b331ee6c3402b2f8",
+    "mfc/suite.py": "034356f45b0cbce276922774880cc9b5bf4c1485e00d7885bbe08f56322a978d",
+    "mfc/download.py": "d40b4760c5c8270ddca89ce2bd5e8a4663921c83ce06ffd8c7f3f3c4994527f2",
+    "mfc/io.py": "62cf8b1c7909d0a3f85afb9699d2ae0207b331f872d5e11af46d0ac6202825fa",
+    "mfc/predict.py": "a61ee14401a235895c3ea11db0383074d2e66e389b344ab828c14cf7f8f385a5",
+    "mfc/__init__.py": "0db17a290847563ee227ac2ed540247950ff0ebd4685e9c8c517204c568ebc3e",
+    "mfc/model.py": "14cb4770f3ced38172944e3acc29811cb723c909deaf6056b78dd1198727b441",
+    "mfc/train.py": "4866101bb590fad33bfcc2252fdef9ae45eaeefa52d0fdba51c21a03be0f7a33",
+    "mfc/verify.py": "825555dad652c7fe27bf6be8c862b2149422d00a7cf41d68f765cb5d9f60f03c",
+    "mfc/data.py": "64601d96f26a287554b4a869e83119db0efdd5929af33dcd871f97d9571a5042",
+    "mfc/download_phm.py": "7f67bc59ef41e9a92f3256de2cd5a9620f012962bde84c02fad2e1b5487211da"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch": "2.15.0",
+    "numpy": "2.5.4"
+  },
+  "parameters": 1403539
+}

@@ -1,0 +1,93 @@
+{
+  "data": {
+    "cwru": {
+      "passed": true,
+      "split_counts": {
+        "train": 1164,
+        "val": 291,
+        "test": 292
+      },
+      "source_record_disjoint": true,
+      "exact_query_content_disjoint": true
+    },
+    "phm2012": {
+      "passed": true,
+      "split_counts": {
+        "train": 1181,
+        "val": 322,
+        "test": 647
+      },
+      "source_record_disjoint": true,
+      "exact_query_content_disjoint": true
+    }
+  },
+  "runs": {
+    "results/cwru/full_seed42": {
+      "passed": true,
+      "predictions_recomputed": 292,
+      "checkpoint_reloaded": true
+    },
+    "results/cwru/full_seed43": {
+      "passed": true,
+      "predictions_recomputed": 292,
+      "checkpoint_reloaded": true
+    },
+    "results/cwru/full_seed44": {
+      "passed": true,
+      "predictions_recomputed": 292,
+      "checkpoint_reloaded": true
+    },
+    "results/cwru/cnn_seed42": {
+      "passed": true,
+      "predictions_recomputed": 292,
+      "checkpoint_reloaded": true
+    },
+    "results/cwru/cnn_seed43": {
+      "passed": true,
+      "predictions_recomputed": 292,
+      "checkpoint_reloaded": true
+    },
+    "results/cwru/cnn_seed44": {
+      "passed": true,
+      "predictions_recomputed": 292,
+      "checkpoint_reloaded": true
+    },
+    "results/phm2012/full_seed42": {
+      "passed": true,
+      "predictions_recomputed": 647,
+      "checkpoint_reloaded": true
+    },
+    "results/phm2012/full_seed43": {
+      "passed": true,
+      "predictions_recomputed": 647,
+      "checkpoint_reloaded": true
+    },
+    "results/phm2012/full_seed44": {
+      "passed": true,
+      "predictions_recomputed": 647,
+      "checkpoint_reloaded": true
+    },
+    "results/phm2012/cnn_seed42": {
+      "passed": true,
+      "predictions_recomputed": 647,
+      "checkpoint_reloaded": true
+    },
+    "results/phm2012/cnn_seed43": {
+      "passed": true,
+      "predictions_recomputed": 647,
+      "checkpoint_reloaded": true
+    },
+    "results/phm2012/cnn_seed44": {
+      "passed": true,
+      "predictions_recomputed": 647,
+      "checkpoint_reloaded": true
+    }
+  },
+  "core_tests": {
+    "exit_code": 0,
+    "output": ".........                                                                [100%]\n9 passed in 0.48s"
+  },
+  "compileall": {
+    "exit_code": 0
+  }
+}
